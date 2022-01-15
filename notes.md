@@ -5,4 +5,4 @@ Personal:
 - Since the project is small I did not use git submodules because it seemed overkill. 
 
 Details:
-- The manifest's name is actually "k8s.yml" 
+- The okteto manifest wasn't included in the repository.
