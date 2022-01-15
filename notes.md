@@ -1,0 +1,2 @@
+- El manifesto en realidad se llama "k8s.yml"
+- La aplicación queda deployada con una url pública. Preguntar sobre privacidad y seguridad.
