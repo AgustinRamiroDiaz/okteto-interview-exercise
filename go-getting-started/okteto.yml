@@ -13,3 +13,5 @@ forward:
 volumes:
 - /go/pkg/
 - /root/.cache/go-build/
+envFiles:
+- .env

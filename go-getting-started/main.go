@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"net/http"
+	"os"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
@@ -35,9 +36,11 @@ func podsInCurrentNamespace(w http.ResponseWriter, r *http.Request) {
 		panic(err.Error())
 	}
 
+	namespace := os.Getenv("K8S_NAMESPACE")
+
 	// get pods in all the namespaces by omitting namespace
 	// Or specify namespace to get pods in particular namespace
-	pods, err := clientset.CoreV1().Pods("agustinramirodiaz").List(context.TODO(), metav1.ListOptions{})
+	pods, err := clientset.CoreV1().Pods(namespace).List(context.TODO(), metav1.ListOptions{})
 	if err != nil {
 		panic(err.Error())
 	}
