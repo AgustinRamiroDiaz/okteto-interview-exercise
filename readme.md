@@ -2,6 +2,7 @@
 
 Usage guide:
 - Clone the repository
+- Modify the ```.env``` file to set the namespace variable accordingly (it should match your Okteto user id, see steps below)
 - Install kubectl
 - Follow some of the [Okteto's instructions](https://okteto.com/docs/samples/golang/)
   - [Install Okteto CLI](https://okteto.com/docs/getting-started/installation/) 
